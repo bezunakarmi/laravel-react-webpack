@@ -1,0 +1,26 @@
+//Links-scss
+
+$a-link: 'a';
+$a-link-hover: 'a:hover,a:focus';
+
+#{$a-link} {
+  color: $blue;
+  text-decoration: none;
+}
+
+#{$a-link-hover} {
+  color: $green;
+}
+
+.example-link-element {
+  a{
+    transition: all 0.3s linear;
+    text-decoration: none;
+  }
+  #{$a-link} {
+    color: $dark-pink;
+  }
+  #{$a-link-hover} {
+    color: $orange;
+  }
+}

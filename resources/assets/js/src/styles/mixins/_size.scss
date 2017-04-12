@@ -1,0 +1,15 @@
+//Size-Mixin
+
+@mixin size($width, $height:$width) {
+  width: $width;
+  height: $height;
+}
+
+//Example
+
+.example-square {
+ 	@include size(50px);
+}
+.example-rectangle {
+  @include size(100px, 50px);
+}

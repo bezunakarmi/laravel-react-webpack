@@ -1,0 +1,33 @@
+
+* {
+  box-sizing: border-box;
+}
+
+/* Remove padding and margin */
+html, body {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  font: normal 16px/1.5 $base-font-family;
+  color: $base-color;
+  background: $main-background;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.col {
+  background: #ababab;
+  padding: 20px;
+  text-align: center;
+}

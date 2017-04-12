@@ -1,0 +1,66 @@
+// Breakpoints
+$small-screen: 480px;
+$medium-screen: 768px;
+$large-screen: 1200px;
+$extra-large-screen: 1600px;
+
+//Color-palette
+$black: #4a4a4a;
+$grey: #ccc;
+$light-grey: #d4d4d4;
+$white: #fff;
+$yellow: #ff0;
+$green: #8bc34a;
+$blue: #29d2e4;
+$orange: #f87d09;
+$dark-pink: #e91e63;
+$purple: #9c27b0;
+$light-purple: #efedff;
+
+// Base-colors
+$base-color: $black;
+$brand-color: $blue;
+$secondary-color: $grey;
+$text_color: $base-color;
+$link_color: $dark-pink;
+
+//Body
+$main-background: $white;
+
+//Buttons
+//Buttons-Types
+$button-primary-bg-color: $black;
+$button-info-bg-color: $blue;
+$button-danger-bg-color: $dark-pink;
+$button-warning-bg-color: $orange;
+$button-success-bg-color: $green;
+
+//Buttons-Size
+$button-padding-vertical: 10px;
+$button-padding-horizontal: 15px;
+
+// Typography
+$base-font-family: "Open Sans",san-serif;
+$font-Regular: "OpenSansRegular";
+$font-Light: "OpenSansLight";
+$font-Bold: "OpenSansBold";
+$base-font: $font-Regular;
+
+// Font Sizes
+$base-font-size: 14px;
+
+// Line height
+$base-line-height: 1.5;
+
+// Other Sizes
+$base-border-radius: 4px;
+
+// Header
+$header-background-color: $brand-color;
+
+// Footer
+$footer-background-color: #aaa;
+
+// Border
+$base-border-color: $base-color;
+$base-border: 1px solid $base-border-color;

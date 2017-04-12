@@ -1,0 +1,15 @@
+@import "vendor/normalize.css";
+
+//Variable
+@import "helpers/variables";
+
+//Component
+@import "components/navigation";
+@import "components/fonts";
+
+//pages
+@import "layouts/home";
+
+body{
+    font-family: $font-Regular;
+}

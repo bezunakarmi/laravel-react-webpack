@@ -1,0 +1,36 @@
+
+
+
+#nav {
+  background-color: #fff;
+  text-align: center;
+  margin: 0;
+  padding: 15px 0;
+  width: 100%;
+  box-shadow: 0 2px 40px 0 rgba(0, 0, 0, 0.1);
+
+
+}
+
+#nav {
+  li {
+    display: inline-block;
+    a {
+      color: $black;
+      display: block;
+      font-size: 14px;
+      padding: 10px 25px;
+      border: 2px solid transparent;
+      text-decoration: none;
+      transition: all 0.3s;
+      &:hover, &.active {
+        color: $orange;
+      }
+    }
+  }
+}
+
+
+
+
+

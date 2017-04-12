@@ -1,0 +1,53 @@
+//Box-center-mixin
+@mixin box-center($justify:center, $align: center) {
+  display: flex;
+
+  @if ($align !=false) {
+    align-items: $align;
+  }
+  @if ($justify !=false) {
+    justify-content: $justify;
+  }
+}
+
+//Example
+.example-block-center {
+  @include box-center;
+}
+
+//CSS
+.example-block-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+//Box-center-translate-mixin
+@mixin center-translate($direction: both) {
+  position: absolute;
+  @if $direction == both {
+    top: 50%;
+    left: 50%;
+    transform: translate3d(-50%, -50%, 0);
+  } @else if $direction == horizontal {
+    left: 50%;
+    transform: translate3d(-50%, 0, 0);
+  } @else if $direction == vertical {
+    top: 50%;
+    transform: translate3d(0, -50%, 0);
+  }
+}
+
+//Example
+.example-block-center-translate{
+   @include center-translate;
+ }
+
+//CSS
+.example-block-center-translate {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate3d(-50%, -50%, 0);
+}
+

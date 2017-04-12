@@ -1,0 +1,138 @@
+//Button-Mixin
+
+@mixin button-size($button-padding-vertical,$button-padding-horizontal,$button-font-size,$button-line-height,$button-border-radius) {
+  padding: $button-padding-vertical $button-padding-horizontal;
+  font-size: $button-font-size;
+  line-height: $button-line-height;
+  border-radius: $button-border-radius;
+}
+
+@mixin button-variant($button-text-color,$button-bg-color,$button-border-color) {
+  color: $button-text-color;
+  background-color: $button-bg-color;
+  border-color: $button-border-color;
+  transition: all 300ms ease-in-out;
+
+  &:hover,
+  &:focus,
+  &:active {
+    color: $button-text-color;;
+    background-color: darken($button-bg-color, 10%);
+    border-color: darken($button-border-color, 13%);
+  }
+
+  &[disabled],
+  fieldset[disabled] & {
+    &,
+    &:hover,
+    &:focus,
+    &:active {
+      background-color: $button-bg-color;
+      border-color: $button-border-color;
+    }
+  }
+}
+
+//Example
+.button{
+  display: inline-block;
+  margin-bottom: 0;
+  font-weight: 400;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  -ms-touch-action: manipulation;
+  touch-action: manipulation;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  background-image: none;
+  border: 1px solid;
+  letter-spacing: 0;
+  outline: none;
+  @include button-size(10px,30px,14px,1.2,4px);
+  @include button-variant($white,$black,$black);
+  &.button-secondary {
+    @include button-variant($white,$purple,$purple);
+    &.button-border{
+      &:hover,&:focus {
+        background: $purple;
+        border-color: $purple;
+        color: $white;
+      }
+    }
+  }
+  &.button-info {
+    @include button-variant($white,$blue,$blue);
+    &.button-border{
+      &:hover,&:focus {
+        background: $blue;
+        border-color: $blue;
+        color: $white;
+      }
+    }
+  }
+  &.button-success {
+    @include button-variant($white,$green,$green);
+    &.button-border{
+      &:hover,&:focus {
+        background: $green;
+        border-color: $green;
+        color: $white;
+      }
+    }
+  }
+  &.button-danger {
+    @include button-variant($white,$dark-pink,$dark-pink);
+    &.button-border{
+      &:hover,&:focus {
+        background: $dark-pink;
+        border-color: $dark-pink;
+        color: $white;
+      }
+    }
+  }
+  &.button-warning {
+    @include button-variant($white,$orange,$orange);
+    &.button-border{
+      &:hover,&:focus {
+        background: $orange;
+        border-color: $orange;
+        color: $white;
+      }
+    }
+  }
+  &.button-round {
+    border-radius: 30px;
+  }
+  &.button-icon-circle{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    padding: 0;
+  }
+  &.button-flat {
+    border-radius: 0;
+  }
+  &.button-border{
+    background: none;
+    color: $black;
+    border-width: 2px;
+    &:hover,&:focus {
+      background: $black;
+      border-color: $black;
+      color: $white;
+    }
+  }
+  &.button-disabled {
+    @include button-variant(#efefef,$light-grey,#d4d4d4);
+    color: #efefef;
+    border: #d4d4d4;
+    cursor: not-allowed;
+    &:hover , &:focus {
+      background: #d4d4d4 !important;
+    }
+  }
+}
