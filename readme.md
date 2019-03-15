@@ -23,15 +23,18 @@ This starter kit is designed to get you up and running with with react.js with L
 ## Development
 
 Open your favorite terminal and run these commands. 
-- `php artisan serve`
-- `npm start`
+- `php artisan serve` for running Laravel app
+- `npm start` or `yarn start` to run React app
 
 
 ## Production
 
 For production build:
--  `npm build`
+-  `npm build` or `yarn build`
 
+##Changes
+- Laravel version updated to 5.8
+- React version  updated to 16.2
 
 ## Further improvements
 
